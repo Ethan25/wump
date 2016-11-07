@@ -95,6 +95,9 @@ class game_server(object):
                     # junk = sys.stdin.readline() 
                     running = 0 
 
+                #else:
+                # handle all other sockets / not multithreaded
+
         # close all threads 
         self.s.close() 
         for c in self.threads: 
