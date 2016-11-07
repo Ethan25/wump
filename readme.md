@@ -1,7 +1,15 @@
+Hunt the Wumpus server starter
+==============================
+
+
 Request Message Format:
+=======================
+
+```
 --------------------------------
 | COMMAND | SP | ARGUMENT | \n |
 --------------------------------
+```
 
 Where COMMAND is one of the following (with argument):
 JOIN player_name
@@ -11,6 +19,8 @@ SHOOT target_room
 QUIT
 
 Response Message Format:
+========================
+```
 -----------------------------------------------------------------
 | CODE | message                                           | \n |
 -----------------------------------------------------------------
@@ -20,4 +30,11 @@ Response Message Format:
 -----------------------------------------------------------------
 | messages                                                 | \n |
 -----------------------------------------------------------------
+```
+
+Where CODE and message are something like:
+200 Ok (success not covered by other codes)
+202 Accepted  (on JOIN)
+301 moved permanently (on move)
+400 Bad request (on bad request)
 
